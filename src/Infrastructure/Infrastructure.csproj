@@ -23,7 +23,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="Batch\deploy-ef.bat">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </None>
 	  <None Update="settings.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
