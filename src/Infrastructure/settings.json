@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "CatalogConnection": "Server=(localdb)\\mssqllocaldb;Integrated Security=true;Initial Catalog=Microsoft.eShopOnWeb.CatalogDb;"
+    "CatalogConnection": "Server=tcp:eshoponweb-server.database.windows.net,1433;Initial Catalog=eshoponweb-sqldatabase;Persist Security Info=False;User ID=Administrador;Password=Admin123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
   }
 }
