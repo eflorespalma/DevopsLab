@@ -1,8 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.eShopWeb.ApplicationCore.Entities;
 using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
 using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
+using Microsoft.Extensions.Configuration;
+using System;
 
 namespace Microsoft.eShopWeb.Infrastructure.Data
 {
@@ -108,6 +111,23 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
         private void ConfigureOrderItem(EntityTypeBuilder<OrderItem> builder)
         {
             builder.OwnsOne(i => i.ItemOrdered);
+        }
+    }
+
+    public class JockeyInvoiceContextDesignFactory : IDesignTimeDbContextFactory<CatalogContext>
+    {
+        public CatalogContext CreateDbContext(string[] args)
+        {
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(basePath)
+                .AddJsonFile("settings.json")
+                .Build();
+
+            var optionsBuilder = new DbContextOptionsBuilder<CatalogContext>()
+                .UseSqlServer(configuration.GetConnectionString("CatalogConnection"));
+
+            return new CatalogContext(optionsBuilder.Options);
         }
     }
 }
