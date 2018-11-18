@@ -22,6 +22,9 @@
 	  <Folder Include="Batch\" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Update="Batch\deploy-ef.bat">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	  <None Update="settings.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
