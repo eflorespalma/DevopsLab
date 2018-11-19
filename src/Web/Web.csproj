@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+    <ProjectGuid>{EEA34CE6-4734-4E75-B580-0C1CF1586C86}</ProjectGuid>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>Microsoft.eShopWeb.Web</RootNamespace>
     <UseRazorBuildServer>false</UseRazorBuildServer>

@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+    <ProjectGuid>{38932C2E-C7B0-46BE-AEA7-2295345E1D3B}</ProjectGuid>
     <TargetFramework>netcoreapp2.1</TargetFramework>
 		<RootNamespace>Microsoft.eShopWeb.Infrastructure</RootNamespace>
 	</PropertyGroup>
