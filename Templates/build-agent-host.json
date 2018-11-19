@@ -1,0 +1,104 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Build Agent Host",
+  "Parameters": {
+    "VPC": {
+      "Description": "Default VPC",
+      "Type": "AWS::EC2::VPC::Id"
+    },
+    "Subnet": {
+      "Description": "Subnet publica de la VPC.",
+      "Type": "AWS::EC2::Subnet::Id"
+    },
+    "KeyPair": {
+      "Description": "Archivo KeyPair generado.",
+      "Type": "AWS::EC2::KeyPair::KeyName"
+    },
+    "InstanceType": {
+      "Description": "El tipo de instancia deseado.",
+      "Type": "String",
+      "AllowedValues": [
+        "t2.nano",
+        "t2.micro",
+        "t2.small"
+      ]
+    }
+  },
+  "Mappings": {
+    "RegionAMI": {
+      "us-east-1": {
+        "AmazonLinux": "ami-8fcee4e5",
+        "Ubuntu": "ami-fce3c696",
+        "Windows": "ami-050202fb72f001b47"
+      },
+      "eu-west-1": {
+        "AmazonLinux": "ami-e1398992",
+        "Ubuntu": "ami-f95ef58a",
+        "Windows": "ami-08838e38cfe4854ad"
+      },
+      "ap-northeast-1": {
+        "AmazonLinux": "ami-59bdb937",
+        "Ubuntu": "ami-a21529cc",
+        "Windows": "ami-0134dae8964ea643c"
+      }
+    }
+  },
+  "Resources": {
+    "EC2Instance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": {
+          "Fn::FindInMap": [
+            "RegionAMI",
+            { "Ref": "AWS::Region" },
+            "Windows"
+          ]
+        },
+        "InstanceType": { "Ref": "InstanceType" },
+        "NetworkInterfaces": [
+          {
+            "AssociatePublicIpAddress": "true",
+            "DeviceIndex": "0",
+            "GroupSet": [ { "Ref": "SecurityGroup" } ],
+            "SubnetId": { "Ref": "Subnet" }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "build-agent-host"
+          }
+        ],
+        "KeyName": { "Ref": "KeyPair" }
+      }
+    },
+    "ElasticIP": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "InstanceId": { "Ref": "EC2Instance" },
+        "Domain": "vpc"
+      }
+    },
+    "SecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "build-agent-host",
+        "VpcId": { "Ref": "VPC" },
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "FromPort": 3389,
+            "IpProtocol": "tcp",
+            "ToPort": 3389
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "BuildAgentHost": {
+      "Description": "IP Publica del Agente.",
+      "Value": { "Ref": "ElasticIP" }
+    }
+  }
+}

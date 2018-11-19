@@ -1,0 +1,18 @@
+﻿[
+  {
+    "ParameterKey": "VPC",
+    "ParameterValue": "vpc-046bb67e"
+  },
+  {
+    "ParameterKey": "Subnet",
+    "ParameterValue": "subnet-6dec6c0a"
+  },
+  {
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "t2.small"
+  },
+  {
+    "ParameterKey": "KeyPair",
+    "ParameterValue": "devops-lab-key-pair"
+  }
+]
