@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "tests\UnitTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "tests\IntegrationTests\IntegrationTests.csproj", "{0F576306-7E2D-49B7-87B1-EB5D94CFD5FC}"
 EndProject
-Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "Templates", "Templates\Templates.deployproj", "{A5423F16-FACE-443D-B175-9FBFCEF101E8}"
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "Templates", "src\Templates\Templates.deployproj", "{A5423F16-FACE-443D-B175-9FBFCEF101E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
