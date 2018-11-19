@@ -114,7 +114,7 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
         }
     }
 
-    public class JockeyInvoiceContextDesignFactory : IDesignTimeDbContextFactory<CatalogContext>
+    public class CatalogContextDesignFactory : IDesignTimeDbContextFactory<CatalogContext>
     {
         public CatalogContext CreateDbContext(string[] args)
         {

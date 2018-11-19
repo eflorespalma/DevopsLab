@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
+using System;
 
 namespace Microsoft.eShopWeb.Infrastructure.Identity
 {
@@ -16,9 +18,23 @@ namespace Microsoft.eShopWeb.Infrastructure.Identity
         {
             base.OnModelCreating(builder);
             builder.HasDefaultSchema(DEFAULT_SCHEMA);
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
+        }
+    }
+
+    public class AppIdentityDbContextDesignFactory : IDesignTimeDbContextFactory<AppIdentityDbContext>
+    {
+        public AppIdentityDbContext CreateDbContext(string[] args)
+        {
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(basePath)
+                .AddJsonFile("settings.json")
+                .Build();
+
+            var optionsBuilder = new DbContextOptionsBuilder<AppIdentityDbContext>()
+                .UseSqlServer(configuration.GetConnectionString("CatalogConnection"));
+
+            return new AppIdentityDbContext(optionsBuilder.Options);
         }
     }
 
