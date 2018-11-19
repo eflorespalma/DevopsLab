@@ -2,6 +2,7 @@ set EfMigrationsNamespace=%1
 set EfMigrationsDllName=%1.dll
 set EfMigrationsDllDepsJson=%1.deps.json
 set EfContext="CatalogContext"
+set EfContextIdentity="AppIdentityDbContext"
 set EfMigrationsDllRuntimeConfigJson=%1.runtimeconfig.json
 set DllDir=%cd%
 set PathToNuGetPackages=%USERPROFILE%\.nuget\packages
@@ -63,3 +64,4 @@ if %PathToEfDll% EQU "not-found" (
 )
 
 dotnet exec --depsfile .\%EfMigrationsDllDepsJson% --additionalprobingpath %PathToNuGetPackages% --additionalprobingpath %PathToNuGetPackages_Fallback1% --additionalprobingpath %PathToNuGetPackages_Fallback2% --runtimeconfig %EfMigrationsDllRuntimeConfigJson% %PathToEfDll% database update --assembly .\%EfMigrationsDllName% --startup-assembly .\%EfMigrationsDllName% --project-dir . --verbose --root-namespace %EfMigrationsNamespace% --context %EfContext%
+dotnet exec --depsfile .\%EfMigrationsDllDepsJson% --additionalprobingpath %PathToNuGetPackages% --additionalprobingpath %PathToNuGetPackages_Fallback1% --additionalprobingpath %PathToNuGetPackages_Fallback2% --runtimeconfig %EfMigrationsDllRuntimeConfigJson% %PathToEfDll% database update --assembly .\%EfMigrationsDllName% --startup-assembly .\%EfMigrationsDllName% --project-dir . --verbose --root-namespace %EfMigrationsNamespace% --context %EfContextIdentity%
