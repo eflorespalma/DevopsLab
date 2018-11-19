@@ -23,6 +23,8 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
+    <Content Include="build-paas-infrastructure.parameters.json" />
+    <Content Include="build-paas-infrastructure.json" />
     <Content Include="build-agent-host.json" />
     <None Include="build-agent-host.parameters.json" />
     <None Include="Deployment.targets">
