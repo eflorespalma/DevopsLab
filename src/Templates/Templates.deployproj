@@ -25,10 +25,10 @@
   <ItemGroup>
     <Content Include="build-elastic-beanstalk-app.json" />
     <Content Include="build-elastic-beanstalk-app.parameters.json" />
-    <Content Include="build-paas-infrastructure.parameters.json" />
-    <Content Include="build-paas-infrastructure.json" />
-    <Content Include="build-agent-host.json" />
-    <None Include="build-agent-host.parameters.json" />
+    <Content Include="devops-lab-stack.parameters.json" />
+    <Content Include="devops-lab-stack.json" />
+    <Content Include="devops-lab-agent-stack.json" />
+    <None Include="devops-lab-agent-stack.parameters.json" />
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>

@@ -18,5 +18,9 @@
   {
     "ParameterKey": "SQLEdition",
     "ParameterValue": "sqlserver-ex"
+  },
+  {
+    "ParameterKey": "EBSApplicationName",
+    "ParameterValue": "eshoponweb-develop"
   }
 ]
