@@ -52,10 +52,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="LoadTest\IniciarSesion\Login.loadtest">
+    <None Include="LoadTest\IniciarSesion\LoginEShop.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="PerformanceTest\IniciarSesion\Login.webtest">
+    <None Include="PerformanceTest\IniciarSesion\LoginEShop.webtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

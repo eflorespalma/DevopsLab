@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "tests\I
 EndProject
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "Templates", "src\Templates\Templates.deployproj", "{A5423F16-FACE-443D-B175-9FBFCEF101E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAndLoadTests", "WebAndLoadTests\WebAndLoadTests.csproj", "{615B00B8-7B65-46C2-A9EB-4608948647ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAndLoadTests", "tests\WebAndLoadTests\WebAndLoadTests.csproj", "{615B00B8-7B65-46C2-A9EB-4608948647ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47082029-BDDC-4E9E-B6F4-2B45DCB14AE0}"
 	ProjectSection(SolutionItems) = preProject
