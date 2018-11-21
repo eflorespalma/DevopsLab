@@ -20,8 +20,9 @@ namespace Microsoft.eShopWeb.Web.Controllers
         public async Task<IActionResult> Index(int? brandFilterApplied, int? typesFilterApplied, int? page)
         {
             var client = new TelemetryClient();
-            client.TrackTrace("AppInsights is now ready for logging");
+            client.TrackTrace("List Index", ApplicationInsights.DataContracts.SeverityLevel.Information);
             var itemsPage = 10;
+            client.TrackTrace($"Items Page {itemsPage}", ApplicationInsights.DataContracts.SeverityLevel.Information);
             var catalogModel = await _catalogService.GetCatalogItems(page ?? 0, itemsPage, brandFilterApplied, typesFilterApplied);
             return View(catalogModel);
         }
