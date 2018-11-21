@@ -55,8 +55,6 @@ namespace Microsoft.eShopWeb.Web.Controllers
             return View(await GetBasketViewModelAsync());
         }
 
-
-        // POST: /Basket/AddToBasket
         [HttpPost]
         public async Task<IActionResult> AddToBasket(CatalogItemViewModel productDetails)
         {
