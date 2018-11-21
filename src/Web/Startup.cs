@@ -113,7 +113,7 @@ namespace Microsoft.eShopWeb.Web
             IHostingEnvironment env,
             ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddApplicationInsights(app.ApplicationServices);
+            loggerFactory.AddApplicationInsights(app.ApplicationServices, LogLevel.Information);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
