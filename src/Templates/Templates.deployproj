@@ -23,8 +23,6 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
-    <Content Include="build-elastic-beanstalk-app.json" />
-    <Content Include="build-elastic-beanstalk-app.parameters.json" />
     <Content Include="devops-lab-stack.parameters.json" />
     <Content Include="devops-lab-stack.json" />
     <Content Include="devops-lab-agent-stack.json" />
