@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "CatalogConnection": "Server=devopslab.cy7tcsdqiojo.us-east-1.rds.amazonaws.com;Initial Catalog=eshoponweb-sqldatabase;Persist Security Info=False;User ID=Administador;Password=Admin123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;"
+    "CatalogConnection": "Server=devopslab-dev.cy7tcsdqiojo.us-east-1.rds.amazonaws.com,1433;Initial Catalog=eshoponweb-dev-sqldatabase;Persist Security Info=False;User ID=Administrador;Password=D30psLa6.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;"
   }
 }

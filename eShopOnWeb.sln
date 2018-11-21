@@ -19,6 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "tests\I
 EndProject
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "Templates", "src\Templates\Templates.deployproj", "{A5423F16-FACE-443D-B175-9FBFCEF101E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAndLoadTests", "tests\WebAndLoadTests\WebAndLoadTests.csproj", "{615B00B8-7B65-46C2-A9EB-4608948647ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47082029-BDDC-4E9E-B6F4-2B45DCB14AE0}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +56,10 @@ Global
 		{A5423F16-FACE-443D-B175-9FBFCEF101E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5423F16-FACE-443D-B175-9FBFCEF101E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5423F16-FACE-443D-B175-9FBFCEF101E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{615B00B8-7B65-46C2-A9EB-4608948647ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615B00B8-7B65-46C2-A9EB-4608948647ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{615B00B8-7B65-46C2-A9EB-4608948647ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{615B00B8-7B65-46C2-A9EB-4608948647ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +71,8 @@ Global
 		{EF6877E6-59CB-43A7-8C2C-E70DD70CC5B6} = {15EA4737-125B-4E6E-A806-E13B7EBCDCCF}
 		{0F576306-7E2D-49B7-87B1-EB5D94CFD5FC} = {15EA4737-125B-4E6E-A806-E13B7EBCDCCF}
 		{A5423F16-FACE-443D-B175-9FBFCEF101E8} = {419A6ACE-0419-4315-A6FB-B0E63D39432E}
+		{615B00B8-7B65-46C2-A9EB-4608948647ED} = {15EA4737-125B-4E6E-A806-E13B7EBCDCCF}
+		{47082029-BDDC-4E9E-B6F4-2B45DCB14AE0} = {15EA4737-125B-4E6E-A806-E13B7EBCDCCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49813262-5DA3-4D61-ABD3-493C74CE8C2B}

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Login" Id="b8dedaaf-050f-463a-bd51-a453520d97c2" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="Login.776ef9ed-f79a-4485-be9b-f548149123d8.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="edbd18b5-a137-42d4-893e-602e64b657e9" Version="1.1" Url="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="d25214f6-168f-4d6d-9326-3566a34bfa23" Version="1.1" Url="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/fonts/Montserrat-Regular.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="714d99bd-941e-4a3e-81f8-c89312769993" Version="1.1" Url="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/fonts/Montserrat-Bold.woff" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="5b0d4935-915c-4bc9-b1c3-0165d400cc08" Version="1.1" Url="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/Account/SignIn" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="07da91dd-4c18-437c-a2de-dd199d34b7e5" Version="1.1" Url="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/fonts/Montserrat-Regular.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/Account/SignIn" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="d5c2538a-65b8-4533-be02-0bf46eda9db9" Version="1.1" Url="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/fonts/Montserrat-Bold.woff" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/Account/SignIn" />
+          </Headers>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="623d5144-bcb5-4d64-8b89-655ff01dbb0f" Version="1.1" Url="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/Account/SignIn" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://eshoponweb-dev.us-east-1.elasticbeanstalk.com/Account/SignIn" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Email" Value="eflorespalma" RecordedValue="eflorespalma" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Password" Value="P@ssw0rd.321" RecordedValue="P@ssw0rd.321" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="CfDJ8H1dBmHyQTlLgX6dw4sQQ1FstsVyPTe--48QCbJSmhO9V4yRuL8kJrYpkLzVaWaI36vYi2dnFk88rJ-r4_GIx569iWnnYMbtUTEVm2bGhq98cyLLvZ7M5MCXYkpM73XaueChLiY42yNGdDFfXpWLGU8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RememberMe" Value="{{$HIDDEN1.RememberMe}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

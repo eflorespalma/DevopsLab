@@ -1,0 +1,26 @@
+[
+  {
+    "ParameterKey": "SqlServerInstanceName",
+    "ParameterValue": "devopslab-dev"
+  },
+  {
+    "ParameterKey": "DatabaseUsername",
+    "ParameterValue": "Administrador"
+  },
+  {
+    "ParameterKey": "DatabasePassword",
+    "ParameterValue": "D30psLa6."
+  },
+  {
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "db.t2.medium"
+  },
+  {
+    "ParameterKey": "SQLEdition",
+    "ParameterValue": "sqlserver-ex"
+  },
+  {
+    "ParameterKey": "EBSApplicationName",
+    "ParameterValue": "eshoponweb-develop"
+  }
+]

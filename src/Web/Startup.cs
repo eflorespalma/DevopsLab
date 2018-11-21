@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Text;
+using Microsoft.Extensions.Logging;
 
 namespace Microsoft.eShopWeb.Web
 {
