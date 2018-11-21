@@ -11,10 +11,6 @@ using Microsoft.eShopWeb.ApplicationCore.Specifications;
 
 namespace Microsoft.eShopWeb.Web.Services
 {
-    /// <summary>
-    /// This is a UI-specific service so belongs in UI project. It does not contain any business logic and works
-    /// with UI-specific types (view models and SelectListItem types).
-    /// </summary>
     public class CatalogService : ICatalogService
     {
         private readonly ILogger<CatalogService> _logger;
