@@ -36,7 +36,7 @@
   <Target Name="GetReferenceAssemblyPaths" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties build-agent-host_1parameters_1json__JSONSchema="http://jsonapi.org/schema" build-agent-host_1json__JSONSchema="http://jsonapi.org/schema" />
+      <UserProperties />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
